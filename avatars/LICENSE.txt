@@ -1,0 +1,1 @@
+Original simple SVG avatars created for this assignment. Released under CC0 1.0. No external avatar service is needed.

@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Assignment 6 | Tasks 1 and 2</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="grid.css"></head>
+<body data-task="2">
+<header><div><p class="eyebrow">ASSIGNMENT 6 · JQUERY</p><h1>The birthday party</h1><p>19:30–22:30 · The cake disappeared at 21:30</p></div><div class="task-label">Task 2<small>Alireza Rasuli</small></div></header>
+<nav class="page-nav"><a href="#task1">Task 1 · Case grid</a><a href="#task2">Task 2 · Party in motion</a></nav>
+<main><section class="controls" id="task1" aria-label="Task 1 cases"><h2>Task 1 · Selector Detective</h2><p class="section-intro">Select a case card to run its jQuery search and highlight its result in the party below.</p><div id="case-buttons"></div><div class="actions"><button id="clear">Clear highlights</button><button id="reset">Reset party</button></div></section>
+<section id="result" role="status" aria-live="polite">Choose a case card above to search the party.</section>
+<section id="task2" class="task2-panel"><h2>Task 2 · The Party in Motion</h2><p class="section-intro">These effects work on the same party below: spotlight case results, open a guest’s card, move guests between rooms, and sort each room by arrival time.</p><div class="feature-grid"><article><strong>Spotlight</strong><span>Run a case. Matches stay bright and the rest fade. Use Clear to brighten everyone.</span></article><article><strong>Guest details</strong><span>Click a guest to grow their information card from the avatar. Press Escape or click outside to close.</span></article><article><strong>Move guests</strong><span>Open a guest card and choose a destination room. The guest flies to that room’s end.</span></article><article><strong>Sort rooms</strong><span>Use “Sort by time” on a room to sort arrivals, then click again to restore picture order.</span></article></div>
+<div id="house" aria-label="Party house"></div>
+<p class="legend">Rings show clothing color · AITU marks students · Belongings: Phone · Glasses · Bag · Cup · Cake crumbs</p>
+<p id="task-note"></p></section></main>
+<script src="../vendor/jquery-3.6.0.min.js"></script><script src="data.js"></script><script src="app.js"></script></body></html>
