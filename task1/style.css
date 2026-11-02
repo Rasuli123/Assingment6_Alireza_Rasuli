@@ -1,1 +1,287 @@
-*{box-sizing:border-box}body{margin:0;background:#f3f5f7;color:#202c37;font:15px Arial,sans-serif}header{padding:25px 32px;background:#18384b;color:white;display:flex;justify-content:space-between;align-items:center}h1{font-size:32px;margin:5px 0 10px}header p{margin:0;color:#d5e3ea}.eyebrow{font-size:12px;letter-spacing:2px}.task-label{font-size:24px;text-align:right}.task-label small{display:block;font-size:14px;margin-top:8px}main{max-width:1440px;margin:auto;padding:20px 28px}h2{font-size:18px;margin:0 0 10px}.controls{background:white;border:1px solid #d8dfe5;border-radius:10px;padding:16px}#case-buttons{display:flex;flex-wrap:wrap;gap:6px}button{font:inherit;cursor:pointer;background:white;border:1px solid #aab9c4;border-radius:6px;padding:8px 12px;color:#203848}button:hover,button:focus-visible{background:#e5f0f6;outline:2px solid #91bace}button.active{background:#18384b;color:white}.actions{display:flex;gap:8px;margin-top:10px}#result{margin:14px 0;background:#fff7d9;border:1px solid #dfc66a;border-radius:8px;padding:14px;min-height:68px;line-height:1.5}#result strong{display:block}#house{border:7px solid #694d3b;border-radius:10px;overflow:hidden;background:#694d3b}.floor{display:grid;grid-template-columns:48px 1fr 1fr;gap:6px;margin-bottom:6px}.floor:last-child{margin-bottom:0}.floor-label{color:white;writing-mode:vertical-rl;transform:rotate(180deg);text-align:center;letter-spacing:3px;font-weight:bold;padding:8px}.room{background:#fffdf6;padding:14px 12px;min-width:0}.floor[data-floor="2"] .room{background:#eaf2f7}.room-title{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px}.room-title h2{margin:0}.sort{font-size:12px;padding:5px 8px}.guests{display:flex;align-items:flex-start;gap:6px;min-height:168px;position:relative}.guest{width:80px;flex:0 0 80px;text-align:center;position:relative;border-radius:8px;padding:5px 2px;cursor:pointer;border:2px solid transparent;background:rgba(255,255,255,.4);color:#202c37}.guest:focus-visible{outline:2px solid #18384b}.avatar{width:61px;height:61px;border:4px solid var(--clothing);border-radius:50%;display:block;margin:0 auto 7px;background:#fff}.guest b{display:block;font-size:14px;margin-bottom:5px}.time{display:block;font-size:12px;color:#4b5967}.things{display:flex;justify-content:center;gap:3px;flex-wrap:wrap;margin-top:7px;min-height:23px}.thing{font-size:10px;font-weight:bold;display:inline-flex;align-items:center;justify-content:center;border-radius:4px;background:#dae5ec;padding:4px}.badge{position:absolute;right:0;top:0;background:#20578a;color:white;border-radius:10px;font-size:9px;padding:4px}.found{border-color:#ad7800;background:#fff0ae}.room.found{outline:4px solid #d5a320;outline-offset:-5px}.legend,#task-note{font-size:12px;line-height:1.7;color:#4c5c68}.flying{position:absolute;z-index:50;pointer-events:none}.slot{flex:0 0 auto;height:160px}.info-panel{position:absolute;z-index:100;background:white;border:2px solid #365d73;border-radius:12px;box-shadow:0 12px 35px #18384b44;padding:20px;overflow:hidden}.info-panel h2{font-size:23px}.info-panel p{line-height:1.5}.info-panel button{margin:3px}.info-panel .close{float:right;padding:3px 8px}.info-panel .detail-avatar{width:70px;height:70px}.info-panel .moves{margin-top:12px}.info-panel .moves button{font-size:13px}.room-count{font-size:11px;color:#596b77;margin-left:6px}@media(max-width:1100px){main{min-width:1050px}header{min-width:1050px}.guest{width:70px;flex-basis:70px}.avatar{width:54px;height:54px}}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: #f3f5f7;
+  color: #202c37;
+  font:
+    15px Arial,
+    sans-serif;
+}
+header {
+  padding: 25px 32px;
+  background: #18384b;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+h1 {
+  font-size: 32px;
+  margin: 5px 0 10px;
+}
+header p {
+  margin: 0;
+  color: #d5e3ea;
+}
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+.task-label {
+  font-size: 24px;
+  text-align: right;
+}
+.task-label small {
+  display: block;
+  font-size: 14px;
+  margin-top: 8px;
+}
+main {
+  max-width: 1440px;
+  margin: auto;
+  padding: 20px 28px;
+}
+h2 {
+  font-size: 18px;
+  margin: 0 0 10px;
+}
+.controls {
+  background: white;
+  border: 1px solid #d8dfe5;
+  border-radius: 10px;
+  padding: 16px;
+}
+#case-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+button {
+  font: inherit;
+  cursor: pointer;
+  background: white;
+  border: 1px solid #aab9c4;
+  border-radius: 6px;
+  padding: 8px 12px;
+  color: #203848;
+}
+button:hover,
+button:focus-visible {
+  background: #e5f0f6;
+  outline: 2px solid #91bace;
+}
+button.active {
+  background: #18384b;
+  color: white;
+}
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+#result {
+  margin: 14px 0;
+  background: #fff7d9;
+  border: 1px solid #dfc66a;
+  border-radius: 8px;
+  padding: 14px;
+  min-height: 68px;
+  line-height: 1.5;
+}
+#result strong {
+  display: block;
+}
+#house {
+  border: 7px solid #694d3b;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #694d3b;
+}
+.floor {
+  display: grid;
+  grid-template-columns: 48px 1fr 1fr;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+.floor:last-child {
+  margin-bottom: 0;
+}
+.floor-label {
+  color: white;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  text-align: center;
+  letter-spacing: 3px;
+  font-weight: bold;
+  padding: 8px;
+}
+.room {
+  background: #fffdf6;
+  padding: 14px 12px;
+  min-width: 0;
+}
+.floor[data-floor="2"] .room {
+  background: #eaf2f7;
+}
+.room-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.room-title h2 {
+  margin: 0;
+}
+.sort {
+  font-size: 12px;
+  padding: 5px 8px;
+}
+.guests {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  min-height: 168px;
+  position: relative;
+}
+.guest {
+  width: 80px;
+  flex: 0 0 80px;
+  text-align: center;
+  position: relative;
+  border-radius: 8px;
+  padding: 5px 2px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  background: rgba(255, 255, 255, 0.4);
+  color: #202c37;
+}
+.guest:focus-visible {
+  outline: 2px solid #18384b;
+}
+.avatar {
+  width: 61px;
+  height: 61px;
+  border: 4px solid var(--clothing);
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 7px;
+  background: #fff;
+}
+.guest b {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.time {
+  display: block;
+  font-size: 12px;
+  color: #4b5967;
+}
+.things {
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+  flex-wrap: wrap;
+  margin-top: 7px;
+  min-height: 23px;
+}
+.thing {
+  font-size: 10px;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background: #dae5ec;
+  padding: 4px;
+}
+.badge {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #20578a;
+  color: white;
+  border-radius: 10px;
+  font-size: 9px;
+  padding: 4px;
+}
+.found {
+  border-color: #ad7800;
+  background: #fff0ae;
+}
+.room.found {
+  outline: 4px solid #d5a320;
+  outline-offset: -5px;
+}
+.legend,
+#task-note {
+  font-size: 12px;
+  line-height: 1.7;
+  color: #4c5c68;
+}
+.flying {
+  position: absolute;
+  z-index: 50;
+  pointer-events: none;
+}
+.slot {
+  flex: 0 0 auto;
+  height: 160px;
+}
+.info-panel {
+  position: absolute;
+  z-index: 100;
+  background: white;
+  border: 2px solid #365d73;
+  border-radius: 12px;
+  box-shadow: 0 12px 35px #18384b44;
+  padding: 20px;
+  overflow: hidden;
+}
+.info-panel h2 {
+  font-size: 23px;
+}
+.info-panel p {
+  line-height: 1.5;
+}
+.info-panel button {
+  margin: 3px;
+}
+.info-panel .close {
+  float: right;
+  padding: 3px 8px;
+}
+.info-panel .detail-avatar {
+  width: 70px;
+  height: 70px;
+}
+.info-panel .moves {
+  margin-top: 12px;
+}
+.info-panel .moves button {
+  font-size: 13px;
+}
+.room-count {
+  font-size: 11px;
+  color: #596b77;
+  margin-left: 6px;
+}
+@media (max-width: 1100px) {
+  main {
+    min-width: 1050px;
+  }
+  header {
+    min-width: 1050px;
+  }
+  .guest {
+    width: 70px;
+    flex-basis: 70px;
+  }
+  .avatar {
+    width: 54px;
+    height: 54px;
+  }
+}
